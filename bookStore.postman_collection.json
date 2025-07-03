@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "86b2aac4-1c0b-430c-a68f-1e64e9d890b9",
+		"name": "bookStore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28842525"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "create_book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNjk4MjM3LTE4YzQtNGQyYy04Zjg5LTBmODI4MGYwZmM1OSIsImlhdCI6MTc1MTQ5Mjg5NCwiZXhwIjoxNzUxNTAwMDk0fQ.c71eFDXLg9KRRHk-FvOXlwin0tkVY1zE-C2JR4hk8I0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"genre\": \"Classic\",\n  \"publishedYear\": 1925\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/books/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_books",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getById_book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNjk4MjM3LTE4YzQtNGQyYy04Zjg5LTBmODI4MGYwZmM1OSIsImlhdCI6MTc1MTUzMDA4NiwiZXhwIjoxNzUxNTM3Mjg2fQ.7tn3aWXncFnf8FjOWAWNbwTbMhXkHQc3L54zNJ0sN3Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/books/1cb8231d-e587-4f26-b0d1-0caa683170a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1cb8231d-e587-4f26-b0d1-0caa683170a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upadte_book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNjk4MjM3LTE4YzQtNGQyYy04Zjg5LTBmODI4MGYwZmM1OSIsImlhdCI6MTc1MTUzMDA4NiwiZXhwIjoxNzUxNTM3Mjg2fQ.7tn3aWXncFnf8FjOWAWNbwTbMhXkHQc3L54zNJ0sN3Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Its the update book title\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/books/1cb8231d-e587-4f26-b0d1-0caa683170a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1cb8231d-e587-4f26-b0d1-0caa683170a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdhNjk4MjM3LTE4YzQtNGQyYy04Zjg5LTBmODI4MGYwZmM1OSIsImlhdCI6MTc1MTUzMDA4NiwiZXhwIjoxNzUxNTM3Mjg2fQ.7tn3aWXncFnf8FjOWAWNbwTbMhXkHQc3L54zNJ0sN3Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/books/1cb8231d-e587-4f26-b0d1-0caa683170a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"books",
+								"1cb8231d-e587-4f26-b0d1-0caa683170a8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"qaz@gmail.com\",\n    \"password\":\"1234567\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"qaz@gmail.com\",\n    \"password\":\"1234567\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
