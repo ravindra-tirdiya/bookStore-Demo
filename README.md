@@ -26,4 +26,5 @@ Rename `sample.env` to `.env` and define:
 ### Start server
 
 ```bash
-npm run dev# bookStore
+npm run dev
+
